@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="100%">
+  <defs>
+    <!-- Dark Tech Energy Gradient Background -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#071328" />
+      <stop offset="100%" stop-color="#020612" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#4facfe" stop-opacity="0.2" />
+    </linearGradient>
+
+    <linearGradient id="greenCandle" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00e676" />
+      <stop offset="100%" stop-color="#008e4c" />
+    </linearGradient>
+
+    <linearGradient id="redCandle" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff5252" />
+      <stop offset="100%" stop-color="#b71c1c" />
+    </linearGradient>
+
+    <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffb300" />
+      <stop offset="100%" stop-color="#ff6f00" />
+    </linearGradient>
+
+    <!-- Overlay Radial Gradient for foreground readability -->
+    <radialGradient id="centerDim" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#071328" stop-opacity="0.85" />
+      <stop offset="70%" stop-color="#071328" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#071328" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Drop Shadows and Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="textShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.9"/>
+    </filter>
+
+    <filter id="pillShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00f2fe" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="320" fill="url(#bgGradient)" rx="12" />
+
+  <!-- Grid Pattern -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" />
+    </pattern>
+    <rect width="1200" height="320" fill="url(#grid)" />
+  </g>
+
+  <!-- DYNAMIC / ANIMATED BACKGROUND ELEMENTS -->
+  <!-- 1. Dynamic Energy Wave Flow (Background) -->
+  <g opacity="0.25">
+    <path d="M-50 200 Q 150 120, 350 220 T 750 180 T 1150 240 T 1300 150" fill="none" stroke="url(#cyanGlow)" stroke-width="4">
+      <animate attributeName="d" 
+        values="M-50 200 Q 150 120, 350 220 T 750 180 T 1150 240 T 1300 150;
+                M-50 180 Q 150 240, 350 160 T 750 220 T 1150 170 T 1300 200;
+                M-50 200 Q 150 120, 350 220 T 750 180 T 1150 240 T 1300 150" 
+        dur="12s" repeatCount="indefinite" />
+    </path>
+    <path d="M-50 240 Q 200 280, 450 180 T 850 230 T 1250 160" fill="none" stroke="#00e676" stroke-width="2" stroke-dasharray="8,8">
+      <animate attributeName="stroke-dashoffset" from="100" to="0" dur="8s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- 2. Background Trading Candlesticks & Charts (Left side) -->
+  <g opacity="0.22" transform="translate(40, 60)">
+    <!-- Wicks & Bodies -->
+    <line x1="30" y1="40" x2="30" y2="160" stroke="#00e676" stroke-width="2"/>
+    <rect x="22" y="70" width="16" height="60" fill="url(#greenCandle)" rx="2"/>
+
+    <line x1="65" y1="30" x2="65" y2="180" stroke="#ff5252" stroke-width="2"/>
+    <rect x="57" y="50" width="16" height="90" fill="url(#redCandle)" rx="2"/>
+
+    <line x1="100" y1="60" x2="100" y2="150" stroke="#00e676" stroke-width="2"/>
+    <rect x="92" y="80" width="16" height="45" fill="url(#greenCandle)" rx="2"/>
+
+    <line x1="135" y1="20" x2="135" y2="190" stroke="#00e676" stroke-width="2"/>
+    <rect x="127" y="40" width="16" height="110" fill="url(#greenCandle)" rx="2"/>
+
+    <!-- Animated Pulse Node -->
+    <circle cx="135" cy="40" r="4" fill="#00e676" filter="url(#glow)">
+      <animate attributeName="r" values="3;7;3" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- 3. Dynamic Power Grid & Risk Network (Right side) -->
+  <g opacity="0.25" transform="translate(980, 50)">
+    <!-- Line chart -->
+    <path d="M0 160 L 40 120 L 80 140 L 120 70 L 160 90 L 190 30" fill="none" stroke="#ffb300" stroke-width="3" />
+    
+    <!-- Moving light along chart -->
+    <circle cx="0" cy="0" r="5" fill="#ffffff" filter="url(#glow)">
+      <animateMotion path="M0 160 L 40 120 L 80 140 L 120 70 L 160 90 L 190 30" dur="4s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Grid Nodes -->
+    <circle cx="40" cy="120" r="5" fill="#ffb300" />
+    <circle cx="80" cy="140" r="5" fill="#ffb300" />
+    <circle cx="120" cy="70" r="5" fill="#ffb300" />
+    <circle cx="160" cy="90" r="5" fill="#ffb300" />
+    <circle cx="190" cy="30" r="6" fill="#00f2fe" filter="url(#glow)" />
+  </g>
+
+  <!-- CENTER PROTECTIVE DIMMING LAYER (Ensures Text Contrast & Legibility) -->
+  <rect x="200" y="20" width="800" height="280" fill="url(#centerDim)" rx="16" />
+
+  <!-- FOREGROUND CONTENT LAYER (Always crisp & on top) -->
+  
+  <!-- Top Badge / Floating Tag -->
+  <g transform="translate(600, 52)" text-anchor="middle">
+    <rect x="-140" y="-14" width="280" height="28" rx="14" fill="#0c1d38" stroke="#00f2fe" stroke-width="1.5" filter="url(#pillShadow)" />
+    <text x="0" y="4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#00f2fe" letter-spacing="1.5">
+      ⚡ CURATED ECOSYSTEM &amp; ANALYTICS
+    </text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="600" y="125" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="38" font-weight="900" fill="#ffffff" filter="url(#textShadow)" letter-spacing="-0.5">
+    Energy Trading &amp; Risk Management
+  </text>
+
+  <!-- Subtitle Line 1 -->
+  <text x="600" y="165" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#76a0d0" filter="url(#textShadow)">
+    Enterprise ETRM / CTRM Platforms • Open-Source Risk Engines • Power System Analytics
+  </text>
+
+  <!-- Key Domain Pills (Foreground Bottom) -->
+  <g transform="translate(600, 225)">
+    <!-- Pill 1: ETRM & CTRM -->
+    <g transform="translate(-310, 0)">
+      <rect x="0" y="0" width="140" height="34" rx="8" fill="#132442" stroke="#1e3a6a" stroke-width="1.5"/>
+      <text x="70" y="21" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#e0e6ed">
+        📊 CTRM / ETRM
+      </text>
+    </g>
+
+    <!-- Pill 2: Market & Credit Risk -->
+    <g transform="translate(-155, 0)">
+      <rect x="0" y="0" width="150" height="34" rx="8" fill="#132442" stroke="#1e3a6a" stroke-width="1.5"/>
+      <text x="75" y="21" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#e0e6ed">
+        📈 VaR &amp; Risk Analytics
+      </text>
+    </g>
+
+    <!-- Pill 3: Power Grid & Dispatch -->
+    <g transform="translate(10, 0)">
+      <rect x="0" y="0" width="145" height="34" rx="8" fill="#132442" stroke="#1e3a6a" stroke-width="1.5"/>
+      <text x="72" y="21" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#e0e6ed">
+        ⚡ Power Dispatch
+      </text>
+    </g>
+
+    <!-- Pill 4: Physical Scheduling -->
+    <g transform="translate(170, 0)">
+      <rect x="0" y="0" width="140" height="34" rx="8" fill="#132442" stroke="#1e3a6a" stroke-width="1.5"/>
+      <text x="70" y="21" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#e0e6ed">
+        🚢 Physical Logistics
+      </text>
+    </g>
+  </g>
+
+  <!-- Decorative Corner Accents -->
+  <path d="M 12 40 L 12 12 L 40 12" fill="none" stroke="#00f2fe" stroke-width="3" opacity="0.6"/>
+  <path d="M 1188 40 L 1188 12 L 1160 12" fill="none" stroke="#00f2fe" stroke-width="3" opacity="0.6"/>
+  <path d="M 12 280 L 12 308 L 40 308" fill="none" stroke="#00f2fe" stroke-width="3" opacity="0.6"/>
+  <path d="M 1188 280 L 1188 308 L 1160 308" fill="none" stroke="#00f2fe" stroke-width="3" opacity="0.6"/>
+
+</svg>
