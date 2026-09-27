@@ -66,7 +66,7 @@
 
 ## 🔓 Open-Source GitHub Repositories & Libraries
 
-> **Community Open-Source Note**: Open-source tools excel in quantitative risk modeling, derivative pricing, and power system optimization. Below are the premier open-source repositories in energy quantitative finance and grid analysis, sorted descending by GitHub star counts.
+> **Community Open-Source Note**: Open-source tools excel in quantitative risk modeling, derivative pricing, and power system optimization. Below are the premier open-source repositories in energy quantitative finance and grid analysis, sorted descending by GitHub Stars_Counts.
 
 - **[QuantLib](https://github.com/lballabio/QuantLib)**  
   [![Stars](https://img.shields.io/github/stars/lballabio/QuantLib?style=social&color=white)](https://github.com/lballabio/QuantLib/stargazers)  
@@ -119,8 +119,8 @@
 We welcome community contributions to keep this ecosystem comprehensive, accurate, and up-to-date!
 
 1. **Fork the Repository**: Click the `Fork` button at the top right of this page.
-2. **Add / Modify Entries**: Update [README.md](README.md) maintaining tabular formatting and star badge conventions.
-3. **Submit a Pull Request**: Include a clear description of your addition (verify links, factual pricing, or star badges).
+2. **Add / Modify Entries**: Update [README.md](README.md) maintaining tabular formatting and Stars_Badge conventions.
+3. **Submit a Pull Request**: Include a clear description of your addition (verify links, factual pricing, or Stars_Badges).
 
 For major framework additions or structural feedback, check our main portal at [Awesome-Awesome-Awesome](https://github.com/ishandutta2007/Awesome-Awesome-Awesome).
 
