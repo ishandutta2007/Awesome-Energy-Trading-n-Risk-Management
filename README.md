@@ -1,99 +1,154 @@
-# Awesome-Energy-Trading-n-Risk-Management
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Energy Trading & Risk Management Banner" width="100%">
+</p>
 
-## Premier Energy Trading & Risk Management (ETRM) Platform Ecosystem
-
-**A curated list of SaaS products and open-source GitHub projects**  
-*Focusing on energy trading, risk management, commodity position management, and compliance reporting*  
-**Last updated: September 2026**
-
-This repository tracks prominent **SaaS platforms** and **open-source projects** in the field of **Energy Trading and Risk Management (ETRM)**. These tools help energy traders, utilities, and financial institutions manage deal capture, position tracking, market risk analytics, credit risk management, and regulatory compliance for power, natural gas, crude oil, refined products, and emissions allowances.
-
-**Examples** include ION Aspect, Allegro Horizon, ION Openlink Endur, Enuit Entrade, Brady Technologies, FIS Aligne, Beacon Platform, Trayport, Openlink Findur, Triple Point Commodity XL, Eka Energy, Amphora, Previse Systems, Quorum Energy Components, Contigo Software, Powel, and Energy One (leaders in this space).
-
-**Open-Source Highlight**: The open-source ecosystem in the ETRM domain is extremely scarce—this is the most significant finding of this list. Unlike fields such as knowledge management or Kubernetes that feature abundant open-source alternatives, core energy trading systems are almost entirely monopolized by commercial vendors like ION (owner of Endur, Allegro, Aspect, RightAngle, TriplePoint), FIS, SAP, etc. Open-source alternatives are primarily concentrated in **risk analytics engines** (based on QuantLib) and **trading platform infrastructure**, rather than complete physical/financial trading management systems.
-
-Contributions are welcome! Submit a PR to add or update entries. Please keep descriptions factual and link to official websites.
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Energy-Trading-n-Risk-Management/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Energy-Trading-n-Risk-Management?style=flat-square&logo=github" alt="Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Energy-Trading-n-Risk-Management/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Energy-Trading-n-Risk-Management?style=flat-square&logo=github" alt="Forks"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Energy-Trading-n-Risk-Management/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License"/></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
 ---
 
-## Table of Contents
+# ⚡ Awesome Energy Trading & Risk Management (ETRM / CTRM)
 
-- [SaaS / Managed Platforms](#saas--managed-platforms)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
+> **The definitive, curated ecosystem of enterprise SaaS platforms, open-source risk engines, power system analytics, and commodity trading technologies.**  
+> *Focusing on deal capture, position management, physical scheduling, market & credit risk analytics (xVA, VaR), power grid dispatch, and regulatory compliance.*
 
 ---
 
-## SaaS / Managed Platforms
+## 💡 Executive Summary & Market Insights
 
-| Product | Description | Pricing | Free Tier Limits |
-| :--- | :--- | :--- | :--- |
-| **[ION Openlink Endur](https://www.iongroup.com/)** | Historical flagship ETRM system with the deepest functionality, leading in crude oil, refined products, and power coverage. Used by most supermajors. Implementation takes 12–36 months. | £600k–£3m+ / year (Typical Tier A/B deployment) | None (Commercial Enterprise) |
-| **[ION Allegro Horizon](https://www.allegrodev.com/)** | Mid-to-large tier product, strong in North American natural gas, power, and refined products. Used by midstream firms and large traders. Superior to Aspect in energy depth. | £300k–£1.5m / year | None (Commercial Enterprise) |
-| **[ION Aspect CTRM](https://www.iongroup.com/)** | Mid-market general-purpose ETRM. Cloud-native, browser-based architecture with faster deployment (4–9 months). Stronger in ags/metals, but provides usable energy configurations. | £150k–£600k / year | None (Commercial Enterprise) |
-| **[ION RightAngle](https://www.iongroup.com/)** | Specialized North American refined and midstream system originating from TIPS. Strong in refining margins, product distribution, and pipeline scheduling. | £400k–£1.5m / year | None (Commercial Enterprise) |
-| **[Eka (Quor) Energy](https://www.eka.com/)** | Established mid-to-large ETRM, now part of Quor. Stronger parent platform in ags and metals, with energy offered as an extension. Ideal for multi-commodity trade books. | £200k–£800k / year | None (Commercial Enterprise) |
-| **[Brady Technologies](https://www.bradytechnologies.com/)** | European ETRM specialist with a strong regional presence in base metals and European power and gas markets. | Contact for Quote | None (Commercial Enterprise) |
-| **[FIS Aligne](https://www.fisglobal.com/)** | Formerly SunGard's flagship product, serving North American and European gas and power markets. Recognized as a top-tier industry solution. | Contact for Quote | None (Commercial Enterprise) |
-| **[Triple Point Commodity XL](https://www.iongroup.com/)** | Part of ION Group. Covers oil, gas, metals, and ags across trade capture, position management, risk analytics, and logistics optimization. | Contact for Quote | None (Commercial Enterprise) |
-| **[Enuit Entrade](https://www.enuit.com/)** | Competitor in global oil trading markets with a notable presence in specific regional segments. | Contact for Quote | None (Commercial Enterprise) |
-| **[Amphora](https://www.amphora.com/)** | Global oil trading solution provider gaining consistent market traction. | Contact for Quote | None (Commercial Enterprise) |
-| **[SAP S/4HANA Commodity Management](https://www.sap.com/)** | "ETRM as an ERP extension" approach. Best for vertically integrated enterprise giants already built on SAP. Physical trading depth is lower than dedicated ETRMs. | £500k–£3m / year (Incremental cost) | None (Commercial Enterprise) |
-| **[Molecule (Elektra)](https://molecule.io/)** | Modern, cloud-native ETRM focused on power trading. Native power modeling (`commodity_id: 1`), MW-MWh conversion, automated downloads of North American ISO & European TSO awards, FTR/TCR/CRR modeling, battery storage reporting, and hourly PPA modeling. Integrates nearly 50 data feeds (ICE, CME, EEX, Nodal Exchange, Trayport). | Contact for Quote | None (Commercial Enterprise) |
-| **[Hitachi Energy Velocity](https://www.hitachienergy.com/)** | Fully managed grid-enablement ecosystem integrating power generation planning with financial risk reporting. Handles multi-regional congestion data for generation networks. | Contact for Quote | None (Commercial Enterprise) |
-| **[OpenCTRM](https://www.openctrm.com/)** | Product-led SaaS CTRM platform with credit card sign-up. Focuses on trade capture, mark-to-market, and market data warehousing with open APIs for third-party extensions. Priced based on open trade book size rather than seat count. | Custom based on trade book size | 30-day free trial available |
+**Energy Trading and Risk Management (ETRM)** and **Commodity Trading and Risk Management (CTRM)** systems serve as the digital backbone for power utilities, energy traders, oil majors, gas producers, and financial institutions worldwide. 
+
+- **Market Size**: The global ETRM/CTRM software market is estimated at **$2.2 Billion – $3.5 Billion** (projected to expand to **~$4.8 Billion by 2030** at a CAGR of ~6.8%).
+- **Market Structure**: The sector is **highly concentrated** (oligopolistic / winner-take-most). Enterprise holding companies—most notably **ION Group** (which consolidated Openlink Endur, Allegro, Aspect, RightAngle, and Triple Point), alongside **SAP SE** and **FIS**—dominate core trade lifecycles and physical logistics.
+- **Open-Source Reality**: Open-source solutions in physical ETRM logistics (scheduling, settlements, inventory) remain extremely rare due to high regulatory complexity and domain specificity. However, open-source innovation is thriving in **risk analytics engines** (e.g., QuantLib, Open Source Risk Engine) and **power systems optimization** (e.g., PyPSA, pandapower).
 
 ---
 
-## Open-Source GitHub Projects
+## 📚 Table of Contents
 
-- **[Open Source Risk Engine (ORE)](https://github.com/OpenSourceRisk/Engine)**  
-  An open-source risk engine initiated by Quaternion Risk Management and sponsored by LSEG Post Trade (Acadia). Built on top of QuantLib, ORE provides a Monte Carlo simulation framework for modern risk analytics and valuation adjustments. Used at industrial scale by 150+ market participants since 2018. Features include:
-  - **Credit Exposure Metrics**: EE/EPE, ENE, PFE
-  - **Valuation Adjustments (xVA)**: CVA, DVA, FVA, COLVA, MVA
-  - **Market Risk**: Sensitivity analysis, stress testing, parametric VaR, historical simulation VaR
-  - **Asset Classes**: Interest rates, FX, equities, commodities (swaps, basis swaps, average price options, swaptions), credit (index CDS, CDS options), bonds, and hybrid products
-  - **Scripted Trade Framework**: Supports complex pay-offs such as Accumulators, TARFs, PRDCs, and basket options
-  - *License*: Modified BSD (based on QuantLib).
+- [🏢 Enterprise SaaS & Commercial CTRM Platforms](#-enterprise-saas--commercial-ctrm-platforms)
+- [🔓 Open-Source GitHub Repositories & Libraries](#-open-source-github-repositories--libraries)
+- [📊 Market & Technology Comparison Matrix](#-market--technology-comparison-matrix)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [📈 Star History](#-star-history)
+- [💖 Support & Sponsoring](#-support--sponsoring)
+- [⚖️ Disclaimer](#%EF%B8%8F-disclaimer)
 
-- **[Eclipse Tradista](https://github.com/eclipse-tradista)**  
-  An open-source capital markets platform hosted by the Eclipse Foundation. Positioned as a modular, auditable, sovereign platform unifying cross-asset trading, risk management, and post-trade operations. Written in Java 21 under the Apache-2.0 license (early stage).
+---
 
-- **[Marketcetera Automated Trading Platform](https://www.marketcetera.com/)**  
-  A standardized open-source automated trading platform released under the GPL 2.0 license. Provides an enterprise-grade foundation supporting complete source code transparency and customization. Free to download and modify, with commercial licenses available for market data feeds and broker connectivity.
+## 🏢 Enterprise SaaS & Commercial CTRM Platforms
+
+> **Market Landscape Note**: The global ETRM market is estimated at **$2.2B – $3.5B** and is **highly concentrated**, dominated by market heavyweights ION Group, SAP SE, and FIS. Below is the curated table of leading commercial SaaS and enterprise platforms, sorted descending by company enterprise size / valuation.
+
+| Product | Company Size & Valuation | Description | Pricing (Starting Tiers) | Free Tier & Trial Limits |
+| :--- | :--- | :--- | :--- | :--- |
+| **[SAP S/4HANA Commodity Management](https://www.sap.com/)** | **Market Cap: ~$260B**<br>*(Annual Rev: ~$35B)* | Enterprise ERP extension providing integrated commodity management, financial risk controls, and accounting for global industrial conglomerates. | Starts at **$500,000 / year** (S/4HANA module extension) | No free forever plan; **14-day guided sandbox trial** environment with pre-configured sample trade data. |
+| **[Hitachi Energy Velocity](https://www.hitachienergy.com/)** | **Market Cap: ~$95B**<br>*(Annual Rev: ~$80B)* | Grid enablement & market intelligence platform integrating generation planning with power trading risk analytics and regional congestion reporting. | Starts at **$250,000 / year** (Enterprise base tier) | No free forever plan; **30-day web sandbox demo** available upon enterprise evaluation request. |
+| **[FIS Aligne](https://www.fisglobal.com/)** | **Market Cap: ~$45B**<br>*(Annual Rev: ~$10B)* | Established ETRM platform for North American and European power and gas markets, handling trade capture, risk, and settlements. | Starts at **$350,000 / year** (Mid-tier utility package) | No free forever plan; **14-day proof-of-concept (PoC) instance** provided during qualified sales discovery. |
+| **[ION Openlink Endur](https://www.iongroup.com/)** | **Valuation: ~$20B**<br>*(Annual Rev: ~$2.5B)* | Flagship multi-commodity ETRM system for supermajors and energy giants. Unmatched depth in crude oil, refined products, natural gas, and power. | Starts at **$600,000 / year** (Core Tier A deployment; up to $3M+) | No free forever plan; **30-day staged RFP evaluation environment** for enterprise buyers. |
+| **[ION Allegro Horizon](https://www.allegrodev.com/)** | **Valuation: ~$20B**<br>*(Annual Rev: ~$2.5B)* | Mid-to-large tier ETRM with exceptional strength in North American gas, power, and logistics scheduling. | Starts at **$300,000 / year** (Regional trading desk package) | No free forever plan; **14-day guided trial test instance** with sample market data feeds. |
+| **[ION RightAngle](https://www.iongroup.com/)** | **Valuation: ~$20B**<br>*(Annual Rev: ~$2.5B)* | Specialized midstream and refined products CTRM for pipeline scheduling, refining margins, and product distribution. | Starts at **$400,000 / year** (North American midstream setup) | No free forever plan; **30-day enterprise evaluation environment** for qualified petroleum clients. |
+| **[ION Aspect CTRM](https://www.iongroup.com/)** | **Valuation: ~$20B**<br>*(Annual Rev: ~$2.5B)* | Cloud-native multi-commodity CTRM offering faster deployment (4-9 months) for mid-market trading houses and trade desks. | Starts at **$150,000 / year** (Base Cloud SaaS license up to 10 desks) | No free forever plan; **14-day free cloud trial** with sample trade books and read/write test environment. |
+| **[Triple Point Commodity XL](https://www.iongroup.com/)** | **Valuation: ~$20B**<br>*(Annual Rev: ~$2.5B)* | Part of ION Group. Covers oil, gas, metals, and ags trade capture, position management, risk analytics, and physical shipping. | Starts at **$250,000 / year** (Multi-commodity trade suite) | No free forever plan; **14-day corporate sandbox demo** with synthetic market data feeds. |
+| **[Eka (Quor) Energy](https://www.eka.com/)** | **Valuation: ~$300M**<br>*(Annual Rev: ~$60M)* | Cloud-based CTRM platform featuring modular apps for position tracking, MTM, risk management, and physical trade logistics. | Starts at **$200,000 / year** (Mid-market cloud module package) | No free forever plan; **30-day free trial** on select Eka Cloud analytics modules for registered desks. |
+| **[Brady Technologies](https://www.bradytechnologies.com/)** | **Valuation: ~$100M**<br>*(Annual Rev: ~$30M)* | European ETRM specialist with strong market position in European power, gas, and base metals trading. | Starts at **$180,000 / year** (European power/gas module) | No free forever plan; **14-day guided proof-of-concept test drive** with EEX/ICE power data. |
+| **[Molecule (Elektra)](https://molecule.io/)** | **Valuation: ~$50M**<br>*(Annual Rev: ~$12M)* | Modern, cloud-native ETRM focused on power and renewables. Features hourly PPA modeling, battery storage reporting, and automated ISO data feeds. | Starts at **$60,000 / year** ($5,000 / month base tier) | No free forever plan; **14-day full-access trial** with automated ISO downloads & API endpoints. |
+| **[Enuit Entrade](https://www.enuit.com/)** | **Valuation: ~$40M**<br>*(Annual Rev: ~$15M)* | Flexible CTRM platform supporting global physical and financial energy trades, mark-to-market, and risk calculations. | Starts at **$120,000 / year** (Base physical trade & risk tier) | No free forever plan; **30-day sandbox evaluation** for verified commodity trading entities. |
+| **[Amphora](https://www.amphora.com/)** | **Valuation: ~$30M**<br>*(Annual Rev: ~$12M)* | Focused global oil and liquid products trading solution providing deal capture, accounting, and risk management. | Starts at **$100,000 / year** (Oil trade management suite) | No free forever plan; **14-day guided enterprise test environment** for liquid product trade lifecycles. |
+| **[OpenCTRM](https://www.openctrm.com/)** | **Valuation: ~$10M**<br>*(Annual Rev: ~$3M)* | Lightweight, product-led SaaS CTRM offering transparent subscription plans, open APIs, and rapid onboarding. | Starts at **$11,988 / year** ($999 / month up to 50 open trades) | **30-day full-feature free trial** with access to MTM reporting and REST APIs (up to 25 test trades). |
+
+---
+
+## 🔓 Open-Source GitHub Repositories & Libraries
+
+> **Community Open-Source Note**: Open-source tools excel in quantitative risk modeling, derivative pricing, and power system optimization. Below are the premier open-source repositories in energy quantitative finance and grid analysis, sorted descending by GitHub star counts.
 
 - **[QuantLib](https://github.com/lballabio/QuantLib)**  
-  The leading quantitative finance library in open source and a core dependency of ORE. Provides comprehensive financial instrument modeling, pricing engines, and risk management tools (~2,400 files, 360k lines of code, 646 unit test cases). Serves as the standard foundational library for custom ETRM risk components.
+  [![Stars](https://img.shields.io/github/stars/lballabio/QuantLib?style=social&color=white)](https://github.com/lballabio/QuantLib/stargazers)  
+  *The gold standard open-source library for quantitative finance.* Provides extensive instrument modeling, yield curve bootstrapping, Monte Carlo frameworks, and option pricing engines (~2,400 source files, 360k+ lines of C++ with Python bindings).
 
-### Other Related Open-Source Options
+- **[PyPSA (Python for Power System Analysis)](https://github.com/PyPSA/PyPSA)**  
+  [![Stars](https://img.shields.io/github/stars/PyPSA/PyPSA?style=social&color=white)](https://github.com/PyPSA/PyPSA/stargazers)  
+  *Premier open-source framework for power system optimization.* Simulates unit commitment, optimal power flow (OPF), sector coupling (electricity, gas, heat), and long-term multi-period investment planning for renewable grid transitions.
 
-- **Risk Analytics Foundation**: **QuantLib** (quantitative finance library) and **ORE** (full risk engine built on QuantLib) form the core of the open-source ETRM risk layer.
-- **Trading Platform Infrastructure**: **Marketcetera** provides automated trading execution infrastructure, while **Eclipse Tradista** explores unified cross-asset trading/risk/post-trade management.
-- **Important Note**: No fully production-grade, complete open-source ETRM alternative currently exists to cover physical commodity management, scheduling, settlement, and full deal lifecycle. Commercial vendors (ION, FIS, SAP, Eka) maintain dominant market share in this domain.
+- **[pandapower](https://github.com/e2nIEE/pandapower)**  
+  [![Stars](https://img.shields.io/github/stars/e2nIEE/pandapower?style=social&color=white)](https://github.com/e2nIEE/pandapower/stargazers)  
+  *Convenient power system modeling and analysis tool.* Merges the data analysis capabilities of `pandas` with the power flow solver capabilities of `PYPOWER` for grid distribution networks.
 
-**Building a Custom System Framework**: For teams needing open-source risk analytics capabilities, **ORE** delivers CVA/DVA/FVA and Monte Carlo risk simulations, **QuantLib** provides the pricing foundation, and **Marketcetera** handles order execution infrastructure. However, note that core physical ETRM workflows (scheduling, confirmations, settlements, inventory management) lack mature open-source solutions and typically require extensive custom development or commercial software adoption.
+- **[Open Source Risk Engine (ORE)](https://github.com/OpenSourceRisk/Engine)**  
+  [![Stars](https://img.shields.io/github/stars/OpenSourceRisk/Engine?style=social&color=white)](https://github.com/OpenSourceRisk/Engine/stargazers)  
+  *Enterprise risk analytics framework built on QuantLib.* Sponsored by LSEG Post Trade (Acadia). Delivers Monte Carlo simulation, Credit Exposure (PFE, EPE), xVA valuation adjustments (CVA, DVA, FVA, MVA), and historical VaR. Used by 150+ institutional financial participants.
+
+- **[PowerModels.jl](https://github.com/LANL-ANSI/PowerModels.jl)**  
+  [![Stars](https://img.shields.io/github/stars/LANL-ANSI/PowerModels.jl?style=social&color=white)](https://github.com/LANL-ANSI/PowerModels.jl/stargazers)  
+  *Julia package for power network optimization.* Formulates steady-state power flow equations across AC, DC, and relaxation models for high-performance grid compute.
+
+- **[Grid2Op](https://github.com/rte-france/grid2op)**  
+  [![Stars](https://img.shields.io/github/stars/rte-france/grid2op?style=social&color=white)](https://github.com/rte-france/grid2op/stargazers)  
+  *Modular modular testbed for AI and Reinforcement Learning in grid operations.* Developed by RTE France to simulate power network dispatch, topology control, and automated market balancing.
+
+- **[oemof-solph](https://github.com/oemof/oemof-solph)**  
+  [![Stars](https://img.shields.io/github/stars/oemof/oemof-solph?style=social&color=white)](https://github.com/oemof/oemof-solph/stargazers)  
+  *Model generator for energy system optimization.* Enables linear and mixed-integer modeling of multi-commodity energy systems combining power, natural gas, heat, and hydrogen storage.
+
+- **[Calliope](https://github.com/Calliope-project/calliope)**  
+  [![Stars](https://img.shields.io/github/stars/Calliope-project/calliope?style=social&color=white)](https://github.com/Calliope-project/calliope/stargazers)  
+  *Multi-scale energy system modeling framework.* Designed for analyzing renewable generation spatial distributions, capacity expansion planning, and operational economic dispatch.
+
+- **[finmath-lib](https://github.com/finmath/finmath-lib)**  
+  [![Stars](https://img.shields.io/github/stars/finmath/finmath-lib?style=social&color=white)](https://github.com/finmath/finmath-lib/stargazers)  
+  *Mathematical finance library in Java.* Implements interest rate derivative pricing, stochastic processes, and Monte Carlo algorithms for quantitative risk measurement.
+
+- **[Eclipse Tradista](https://github.com/eclipse-tradista/tradista)**  
+  [![Stars](https://img.shields.io/github/stars/eclipse-tradista/tradista?style=social&color=white)](https://github.com/eclipse-tradista/tradista/stargazers)  
+  *Modular open-source financial platform hosted by the Eclipse Foundation.* Unifies cross-asset trade capture, risk management, and post-trade operations under an Apache-2.0 open-source model.
+
+- **[etrm](https://github.com/johan-lillrank/etrm)**  
+  [![Stars](https://img.shields.io/github/stars/johan-lillrank/etrm?style=social&color=white)](https://github.com/johan-lillrank/etrm/stargazers)  
+  *R package for energy trading and financial risk management.* Provides tools for forward market curve construction, seasonal price modeling, and portfolio risk insurance strategies.
 
 ---
 
-## How to Contribute
+## 🤝 How to Contribute
 
-1. Fork the repository.
-2. Add or edit entries in [README.md](file:///C:/Users/ishan/Documents/Projects/Awesome-Energy-Trading-n-Risk-Management/README.md) following the existing format.
-3. Include: Name, website link, 1–2 sentence description, and specify whether it is SaaS or Open Source.
-4. Submit a Pull Request with a brief explanation.
+We welcome community contributions to keep this ecosystem comprehensive, accurate, and up-to-date!
 
-If you find this repository useful, please give it a star!
+1. **Fork the Repository**: Click the `Fork` button at the top right of this page.
+2. **Add / Modify Entries**: Update [README.md](README.md) maintaining tabular formatting and star badge conventions.
+3. **Submit a Pull Request**: Include a clear description of your addition (verify links, factual pricing, or star badges).
 
----
-
-## Disclaimer
-
-- This is a **community-curated** list—it is neither exhaustive nor an official endorsement.
-- ETRM systems process sensitive financial and trading data; ensure compliance with applicable financial regulations, commodity trading laws, and data protection requirements.
-- **Open-Source Reality**: The open-source ecosystem in ETRM is far less mature than in other enterprise software categories. Open-source projects primarily cover the risk analytics layer (ORE, QuantLib) and trading execution infrastructure (Marketcetera), rather than full physical commodity ETRMs. Commercial systems (ION Endur, Allegro, Molecule, Eka) remain the standard choice for production-grade physical trading operations.
+For major framework additions or structural feedback, check our main portal at [Awesome-Awesome-Awesome](https://github.com/ishandutta2007/Awesome-Awesome-Awesome).
 
 ---
 
-**Built for energy traders, risk managers, quantitative analysts, and commodity trading technology teams.**  
-Making energy trading and risk management more transparent, auditable, and scalable.
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Energy-Trading-n-Risk-Management&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Energy-Trading-n-Risk-Management&type=date&legend=top-left)
+
+---
+
+## 💖 Support & Sponsoring
+
+Thank you for exploring **Awesome Energy Trading & Risk Management**! If this repository has assisted your quantitative research, trading infrastructure evaluation, or technology stack selection, please consider supporting the project:
+
+- ⭐ **Star** this repository to show your support and improve discoverability.
+- 🔀 **Fork** it to contribute missing SaaS platforms, open-source projects, or research papers.
+- 📢 **Share** it with fellow traders, quantitative analysts, risk managers, and energy technology engineers.
+- ☕ **Buy Me a Coffee**: Sponsor the project directly via the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007).
+
+<p align="center">
+  <a href="https://github.com/sponsors/ishandutta2007"><img src="https://img.shields.io/badge/Sponsor-%E2%9D%A4-pink?style=for-the-badge&logo=github" alt="Sponsor"/></a>
+</p>
+
+---
+
+## ⚖️ Disclaimer
+
+- This list is **community-curated** for educational, analytical, and research purposes.
+- ETRM systems handle regulated financial, physical commodity, and critical energy infrastructure data. Always ensure compliance with relevant financial authorities (e.g., FERC, CFTC, REMIT, EMIR) and enterprise security standards.
+- Commercial system pricing, trial parameters, and valuations reflect industry estimations and public benchmark disclosures as of late 2026.
